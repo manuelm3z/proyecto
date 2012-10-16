@@ -1,6 +1,4 @@
 <?php 
-include('../config.php');
-
 class noticia{
     public $autor;
     public $titulo;
@@ -21,9 +19,9 @@ class noticia{
     public function setNoticia(){
     	$this->consulta = mysql_query("INSERT INTO noticias VALUES (NULL, '{$this->autor}','{$this->titulo}','{$this->noticia}')");
     	if ($this->consulta){
-    		printf("agregado");
+    		echo "agregado";
     	}else{
-    		printf("error");
+    		echo "error";
     	}
     }
 }
